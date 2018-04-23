@@ -1,0 +1,40 @@
+<mvc:View controllerName="com.sap.training.WDE370WDFTranslations.controller.Main" 
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<f:SimpleForm
+						id="SimpleForm354"
+						title="{i18n>form.title}"
+						editable="true"
+						layout="ResponsiveGridLayout"
+						labelSpanL="3"
+						labelSpanM="3"
+						labelSpanS="12"
+						adjustLabelSpan="false"
+						emptySpanL="4"
+						emptySpanM="4"
+						emptySpanS="0"
+						columnsXL="1"
+						columnsL="1"
+						columnsM="1"
+						singleContainerFullSize="true">
+						<f:content>
+							<Label id="lblName" text="{i18n>form.content.lblName}" />
+							<Input id="inpName" value="{/Name}" liveChange="onNameLiveChange"/>
+							<Label id="lblGreeting" text="{i18n>form.content.lblGreeting}" />
+							<Input id="inpGreeting" value="{/Greeting}"/>
+						</f:content>
+
+					</f:SimpleForm>
+					
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
