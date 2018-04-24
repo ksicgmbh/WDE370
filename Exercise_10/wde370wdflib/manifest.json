@@ -1,0 +1,41 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "mylib.custom.lib",
+		"type": "library",
+		"embeds": [],
+		"applicationVersion": {
+			"version": "1.1.0"
+		},
+		"title": "{{title}}",
+		"description": "{{description}}",
+		"ach": "CA-HOME",
+		"offline": true
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"supportedThemes": [
+            "base",
+            "sap_belize"
+        ],
+        "deviceTypes": {
+            "desktop": true, 
+            "tablet": true,
+            "phone": false
+        }
+	},
+	"sap.ui5": {
+		"dependencies": {
+			"minUI5Version": "1.48",
+			"libs": {
+				"sap.ui.core": {
+					"minVersion": "1.48.0"
+				}
+			}
+		},
+		"contentDensities": {
+            "compact": true,
+            "cozy": true
+        }
+	}
+}
