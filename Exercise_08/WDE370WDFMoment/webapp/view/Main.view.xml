@@ -1,0 +1,19 @@
+<mvc:View controllerName="com.sap.trainingWDE370WDFMoment.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:l="sap.ui.layout">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<l:VerticalLayout>
+		<!--				<l:content>-->
+							<Text text="Default: {/dayDefault}" />
+							<Text text="DE: {/dayDE}" />
+							<Text text="EN: {/dayEN}" />
+		<!--				</l:content>-->
+					</l:VerticalLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
