@@ -1,0 +1,17 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="com.sap.training.WDE370Exercise11.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>main.title}">
+		<content>
+			
+		</content>
+		<footer>
+			<Bar id="footerBar">
+				<contentLeft></contentLeft>
+				<contentMiddle></contentMiddle>
+				<contentRight>
+					<Button id="btnNavToDetail" text="{i18n>main.footer.btnNavDetail}" press="onNavToDetailPress" />
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>
