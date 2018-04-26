@@ -1,0 +1,37 @@
+<mvc:View controllerName="com.sap.trainingWDE370Exercise16.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:sf="sap.ui.comp.smartfield" xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<smartForm:SmartForm id="smartForm" app:defaultCheckBoxDisplayBehaviour="OnOff" app:defaultDropDownDisplayBehaviour="idAndDescription"
+						editTogglable="true" title="Name">
+						<smartForm:Group label="Price">
+							<smartForm:GroupElement>
+								<sf:SmartField value="{Price}" id="idPrice"/>
+							</smartForm:GroupElement>
+						</smartForm:Group>
+						<smartForm:Group label="Payment">
+							<smartForm:GroupElement>
+								<sf:SmartField value="{Paymentsum}" id="idPaymentSum"/>
+							</smartForm:GroupElement>
+						</smartForm:Group>
+						<smartForm:Group label="Price">
+							<smartForm:GroupElement>
+								<sf:SmartField value="{Planetype}" id="idPlanetype"/>
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<sf:SmartField value="{Seatsmax}" id="idSeatsmax"/>
+							</smartForm:GroupElement>
+							<smartForm:GroupElement>
+								<sf:SmartField value="{Seatsocc}" id="idSeatsocc"/>
+							</smartForm:GroupElement>
+						</smartForm:Group>
+					</smartForm:SmartForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

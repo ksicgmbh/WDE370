@@ -1,0 +1,74 @@
+{
+  "projectType": [
+    "sap.watt.uitools.ide.fiori",
+    "com.watt.common.builder.sapui5clientbuild",
+    "com.sap.webide.hybrid.cordova"
+  ],
+  "generation": [
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationProjectCommon",
+      "templateVersion": "1.32.0",
+      "dateTimeStamp": "Wed, 25 Apr 2018 14:18:28 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationProject",
+      "templateVersion": "1.40.12",
+      "dateTimeStamp": "Wed, 25 Apr 2018 14:18:28 GMT"
+    },
+    {
+      "templateId": "servicecatalog.connectivityComponent",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Wed, 25 Apr 2018 14:28:58 GMT"
+    }
+  ],
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "basevalidator": {
+    "services": {
+      "xml": "fioriXmlAnalysis",
+      "js": "fioriJsValidator"
+    }
+  },
+  "codeCheckingTriggers": {
+    "notifyBeforePush": true,
+    "notifyBeforePushLevel": "Error",
+    "blockPush": false,
+    "blockPushLevel": "Error"
+  },
+  "build": {
+    "buildRequired": true,
+    "sourceFolder": "webapp",
+    "targetFolder": "dist",
+    "excludedFolders": [],
+    "excludedFiles": []
+  },
+  "hybrid": {
+    "hatVersion": "1.28.9",
+    "appNamespace": "com.sap.trainingWDE370Exercise16",
+    "backendDestination": "FSD_WDF_2018",
+    "oDataConfigs": [
+      {
+        "hybridOdata": {
+          "name": "ZWDE370_FLIGHTDATA_SRV",
+          "serviceUrl": ""
+        },
+        "originOdata": {
+          "name": "ZWDE370_FLIGHTDATA_SRV",
+          "serviceUrl": "/sap/opu/odata/sap/ZWDE370_FLIGHTDATA_SRV/"
+        }
+      }
+    ]
+  },
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/ZWDE370_FLIGHTDATA_SRV",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  }
+}
