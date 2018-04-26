@@ -1,0 +1,39 @@
+<mvc:View controllerName="com.sap.trainingWDE370exercise17.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="FlightSet">
+						<smartFilterBar:controlConfiguration>
+							<smartFilterBar:ControlConfiguration key="Flight" visibleInAdvancedArea="true" preventInitialDataFetchInValueHelpDialog="true">
+							</smartFilterBar:ControlConfiguration>
+						</smartFilterBar:controlConfiguration>
+						<!-- layout data used to make the table growing but the filter bar fixed -->
+						<smartFilterBar:layoutData>
+							<FlexItemData shrinkFactor="0"/>
+						</smartFilterBar:layoutData>
+					</smartFilterBar:SmartFilterBar>
+					<!-- -->
+					<smartTable:SmartTable id="LineItemsSmartTable" smartFilterId="smartFilterBar" entitySet="FlightSet" tableType="ResponsiveTable" 
+						useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true" useTablePersonalisation="true" showRowCount="true"
+						persistencyKey="SmartTableAnalytical_Explored" enableAutoBinding="true" app:useSmartField="true" class="sapUiResponsiveContentPadding">
+						<!-- layout data used to make the table growing but the filter bar fixed -->
+						<smartTable:customToolbar>
+							<Toolbar>
+								<ToolbarSpacer />
+								<Button id="btnInfo" text="Info" icon="sap-icon://add"/>
+								<Button id="btnInfo2" text="Info 2" icon="sap-icon://info"/>
+								<ToolbarSpacer />
+							</Toolbar> 
+						</smartTable:customToolbar>
+						<smartTable:layoutData>
+							<FlexItemData growFactor="1" baseSize="0%"/>
+						</smartTable:layoutData>
+					</smartTable:SmartTable>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
