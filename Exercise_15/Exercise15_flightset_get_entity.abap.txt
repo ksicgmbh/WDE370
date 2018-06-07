@@ -1,0 +1,16 @@
+  METHOD flightset_get_entity.
+
+    DATA ls_entity LIKE er_entity.
+
+    io_tech_request_context->get_converted_keys(
+      IMPORTING
+        es_key_values = ls_entity
+    ).
+
+    SELECT SINGLE * FROM sflight
+      WHERE carrid = @ls_entity-carrid
+        AND connid = @ls_entity-connid
+        AND fldate = @ls_entity-fldate
+      INTO CORRESPONDING FIELDS OF @er_entity.
+
+  ENDMETHOD.

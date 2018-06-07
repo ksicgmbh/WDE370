@@ -1,0 +1,28 @@
+  METHOD currencyset_get_entityset.
+
+    DATA(lr_filter) = io_tech_request_context->get_filter( ).
+    DATA(lt_filter_so) = lr_filter->get_filter_select_options( ).
+
+    LOOP AT lt_filter_so INTO DATA(ls_filter_so).
+      IF ls_filter_so-property EQ 'WAERS'.
+        DATA(lv_waers) = ls_filter_so-select_options[ 1 ]-low.
+      ELSEIF ls_filter_so-property EQ 'SPRAS'.
+        DATA(lv_spras) = ls_filter_so-select_options[ 1 ]-low.
+      ENDIF.
+    ENDLOOP.
+
+    IF iv_search_string IS NOT INITIAL.
+      CONCATENATE '%' iv_search_string '%' INTO DATA(lv_search_str).
+      SELECT * FROM tcurt INTO TABLE @DATA(lt_tcur) WHERE spras = @sy-langu AND ktext LIKE @lv_search_str.
+    ELSEIF lv_waers IS INITIAL.
+      SELECT * FROM tcurt INTO TABLE @lt_tcur WHERE spras = @sy-langu.
+    ELSE.
+      CONCATENATE '%' lv_waers '%' INTO lv_search_str.
+      SELECT * FROM tcurt INTO TABLE @lt_tcur WHERE spras = @sy-langu AND waers LIKE @lv_search_str.
+    ENDIF.
+
+    LOOP AT lt_tcur INTO DATA(ls_tcur).
+      APPEND ls_tcur TO et_entityset.
+    ENDLOOP.
+
+  ENDMETHOD.
