@@ -1,0 +1,13 @@
+#Password=<< Existing password/certificate removed on export >>
+#
+#Tue Sep 11 07:56:01 UTC 2018
+Type=HTTP
+Authentication=BasicAuthentication
+WebIDEUsage=odata_abap,ui5_execute_abap,dev_abap,bsp_execute_abap
+Name=WDE370
+WebIDEEnabled=true
+ProxyType=OnPremise
+URL=http\://fsd.virtual\:8000
+sap-client=100
+User=train-00
+WebIDESystem=FSD_100
